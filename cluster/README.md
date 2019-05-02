@@ -26,5 +26,4 @@ helm delete --purge redis-pv
 kubectl delete -f configmap.yaml
 kubectl delete -f service.yaml
 kubectl delete -f statefulset.yaml
-kubectl delete pvc -l app=redis -n redis
 ```
