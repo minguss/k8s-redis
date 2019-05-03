@@ -8,7 +8,7 @@ install:
 kubectl apply -f configmap.yaml
 kubectl apply -f service.yaml
 kubectl apply -f statefulset.yaml
-kubectl exec -it redis-cluster-0 -n redis -- redis-cli -a xxxx{password} --cluster create --cluster-replicas 1 $(kubectl get pods -l app=redis -n redis -o jsonpath='{range.items[*]}{.status.podIP}:6379 ')
+kubectl exec -it redis-cluster-0 -n redis -- redis-cli -a xxxxx --cluster create --cluster-replicas 1 $(kubectl get pods -l app=redis -n redis -o jsonpath='{range.items[*]}{.status.podIP}:6379 ')
 ```
 ![이미지 16](https://user-images.githubusercontent.com/22410442/57113485-bbc47780-6d7f-11e9-84bf-e65ca6d934e9.png)
 
